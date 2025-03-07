@@ -111,7 +111,7 @@ References & Useful Links
 
 📌 TensorFlow Docs – tensorflow.org
 📌 Kaggle Dataset – Plant Disease Dataset
-📌 GitHub Repository – [Your Repo Link Here]
+📌 GitHub Repository –https://github.com/Sanjana-SN2003/PlantPathoAI
 
 
 ---
