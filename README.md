@@ -1,123 +1,85 @@
-# PlantPathoAI - Plant Disease Detection Using Deep Learning 🌿
+🌿 Leaf Disease Detection App
 
-Problem Statement
 
-Traditional methods for detecting plant diseases require manual inspection, which is time-consuming, inaccurate, and labor-intensive. Early detection of diseases is crucial for effective treatment and yield protection.
-Overview 
-PlantPathoAI is an AI-powered system that detects and classifies plant diseases using Deep Learning (DenseNet121). By analyzing leaf images,Video, it predicts diseases and provides causes & prevention measures to help farmers and researchers prevent crop loss.
+The Leaf Disease Detection App is a machine learning-based application designed to help farmers, gardeners, and agricultural professionals identify plant diseases from leaf images. The app uses a deep learning model to classify diseases and provides detailed information about the disease, its severity, causes, and prevention methods. It also supports real-time camera capture and video stream analysis.
 
-Our Solution
+Features
+Disease Classification: Detects and classifies diseases in plant leaves into seven categories:
+Bacteria
+Fungi
+Healthy
+Nematode
+Pest
+Phytopthora
+Virus
 
-We built an AI-powered Plant Disease Detection System using Convolutional Neural Networks (CNNs) with DenseNet121 to classify healthy and diseased plant leaves. The model also provides causes and preventive measures for identified diseases.
+Real-Time Camera Support: Capture images using your device's camera for instant disease detection.
+Video Stream Analysis: Analyze video streams (e.g., from drones) for disease detection.
+Text-to-Speech: Provides audio feedback for disease diagnosis and prevention tips.
+User-Friendly Interface: Built with Gradio, the app is easy to use and accessible to non-technical users.
 
----
+Technologies Used
+Deep Learning:
+Model: DenseNet121 with custom layers (Batch Normalization, Dropout, Dense layers).
+Framework: TensorFlow and Keras.
+Computer Vision: OpenCV for real-time camera and video stream processing.
+Text-to-Speech: gTTS (Google Text-to-Speech) for audio feedback.
+User Interface: Gradio for building the web-based interface.
+Data Management: Pandas for handling disease information stored in a CSV file.
 
-Key Features
+Usage
+Upload Image:
+Go to the Upload Image tab.
+Upload a leaf image and click Submit.
+The app will display the disease name, severity, cause, and prevention tips.
+![Image](https://github.com/user-attachments/assets/bce19b59-1b3b-44b2-85e4-e5a5a67b19db)
+Real-Time Camera:
+Go to the Real-Time Camera tab.
+Click Capture Image to take a photo using your device's camera.
+The app will analyze the image and provide results.
+![Image](https://github.com/user-attachments/assets/a3b7e143-6803-43c9-813d-fbac1b911d73)
+Video Stream Analysis:
+Go to the Video Stream Analysis tab.
+Upload a video file or provide a stream URL.
+Click Analyze Video to process the video and detect diseases.
 
-✅ Automated Disease Detection – Upload a leaf image to detect plant diseases.
-✅ Deep Learning Model (DenseNet121) – High accuracy classification of plant diseases.
-✅ Cause & Prevention Analysis – Provides disease-related information.
-✅ User-Friendly UI with Gradio – Easy-to-use web interface for predictions.
-✅ Scalable & Real-Time – Can be deployed as a mobile/web application.
-
----
+Chatbot:
+Go to the Chatbot tab.
+Ask questions about plant diseases (e.g., "What causes fungal infections?").
+The chatbot will provide detailed responses with audio feedback.
 
 Dataset
+The model was trained on a dataset containing 3,076 images of plant leaves, categorized into seven classes:
+Bacteria
+Fungi
+Healthy
+Nematode
+Pest
+Phytopthora
+Virus
 
-Source: Kaggle (38 classes of plant leaves with different conditions)
+Dataset_link=https://www.kaggle.com/datasets/nirmalsankalana/potato-leaf-disease-dataset
 
-Images: Preprocessed (resized to 256x256 pixels)
+Model Performance
+Test Accuracy: 95.17%
+Loss: 0.1659
 
-Classes: Bacteria, Fungi, Pest, Nematode, Virus, Phytophthora, and Healthy leaves
+Future Improvements
+Support for more plant species and diseases.
+Integration with mobile apps for on-the-go disease detection.
+Enhanced video stream analysis for large-scale agricultural monitoring.
+Multi-language support for text-to-speech feedback.
 
----
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Commit your changes.
+Submit a pull request.
 
-Model Architecture (DenseNet121)
-
-Pretrained DenseNet121 model (trained on ImageNet) for feature extraction.
-Fully connected layers for classification:
-Flatten → Dense(512, ReLU) → Dropout
-Dense(256, ReLU) → Dropout → Dense(7, Softmax)
-Optimization: Adam Optimizer
-Loss Function: SparseCategoricalCrossentropy
-Training: Achieved ~90% accuracy
-
----
-
-Image Preprocessing Steps
-
-1️⃣ Upload an image
-2️⃣ Resize to 256x256 pixels
-3️⃣ Convert to NumPy array
-4️⃣ Normalize pixel values (0-1)
-5️⃣ Expand dimensions for model input
-
----
-
-Tech Stack
-
-Machine Learning
-
-TensorFlow / Keras – Model training
-CNN with DenseNet121 – Feature extraction
-NumPy / OpenCV – Image processing
-
-Frontend & Backend
-Gradio – User-friendly web interface
-Flask / FastAPI (Optional) – Backend for API deployment
-Google Gemini API (Planned) – Future enhancements
-
----
-
-Deployment & Scalability
-Local Deployment: Run using Python & Gradio
-Cloud Deployment: Can be hosted on AWS, Google Cloud, or Hugging Face Spaces
-Mobile Integration: Future scope includes mobile app support
-
----
-
-How to Use?
-
-1. Install Dependencies
-pip install tensorflow keras gradio numpy pandas matplotlib
-
-2. Run the Model Locally
-python app.py
-
-3. Access Web UI
-Open http://localhost:7860/ in your browser.
-
-Upload a leaf image and get predictions.
-
----
-
-Contributors
-
-👩‍💻 Sanjana S N – Building Machine Learning model,UI
-👨‍💻 Chandana S – Building Machine learning model,Framing Report
-👩‍💻Bhumika A S-Web Ui& integrating ml model
-👩‍💻 Archana A L – Building Ml Model
-
----
-
-Future Enhancements
-
-🚀 Google Gemini API Integration for more advanced insights.
-📱 Mobile App Version for farmers & agricultural experts.
-🔗 Blockchain Integration (Planned) for secure disease tracking.
----
-
-References & Useful Links
-
-📌 TensorFlow Docs – tensorflow.org
-📌 Kaggle Dataset – Plant Disease Dataset
-📌 GitHub Repository –https://github.com/Sanjana-SN2003/PlantPathoAI
-
-
----
-
-License
-
-This project is open-source under the MIT License.
-
-
+Acknowledgments
+TensorFlow and Keras for providing the deep learning framework.
+Gradio for the user-friendly interface.
+OpenCV for real-time image and video processing.
+gTTS for text-to-speech functionality.
+![Image](https://github.com/user-attachments/assets/6bb1028c-2b80-44de-8e62-0c7e67c800e1)
