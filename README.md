@@ -70,12 +70,6 @@ Integration with mobile apps for on-the-go disease detection.
 Enhanced video stream analysis for large-scale agricultural monitoring.
 Multi-language support for text-to-speech feedback.
 
-Contributors
-👩‍💻 Archana A L – Model Development & Integration
-👨‍💻 Bhumika A S – Web UI & Deployment
-👨‍💻 Chandana S- Building Machine learning model
-👨‍💻 Sanjana S N - Model Development and frontend using gradio
-
 Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 Fork the repository.
